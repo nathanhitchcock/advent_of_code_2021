@@ -24,6 +24,8 @@ for index, current_num in enumerate(lst[:-1]):
     next_num = lst[index + 1]
     if current_num < next_num:
         count += 1
+        print(str(index) + ' ' + str(current_num) + ' ' + str(next_num) + ' ' + 'count ' +str(count))
+    else:
         print(str(index) + ' ' + str(current_num) + ' ' + str(next_num))
 
 print(count)
