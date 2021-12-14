@@ -1,6 +1,6 @@
 # puzzle from https://adventofcode.com/2021/day/1
 
-count = 0
+
 
 '''
 #input the numbers from the dataset
@@ -17,13 +17,15 @@ def extract_to_list(file, lst):
 
 extract_to_list(file,lst)
 
-
-
 '''
 for each value in the list(index), compare it to the previous value (index + 1)
 --------------------------------------------------------------
 '''
+count = 0
+
 for index, elem in enumerate(lst):
+    print(' ')
+    print('the index value is ' + str(index))
     # checking to make sure we don't go out of bounds
     if (index - 1 >= 0):
         # defining the positional elements
@@ -40,6 +42,9 @@ for index, elem in enumerate(lst):
             print ('the previous value ' + prev_el + ' is NOT smaller than the next value ' + curr_el + ' BOO!!')
             print('the count is STILL ' + str(count))
             continue
+
+
+
 
 
 '''
