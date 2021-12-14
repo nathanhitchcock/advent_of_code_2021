@@ -1,7 +1,5 @@
 # puzzle from https://adventofcode.com/2021/day/1
 
-
-
 '''
 #input the numbers from the dataset
 --------------------------------------------------------------
@@ -18,39 +16,14 @@ def extract_to_list(file, lst):
 extract_to_list(file,lst)
 
 '''
-for each value in the list(index), compare it to the previous value (index + 1)
+for each value in the list(index), compare it to the next value (index + 1)
 --------------------------------------------------------------
 '''
 count = 0
+for index, current_num in enumerate(lst[:-1]):
+    next_num = lst[index + 1]
+    if current_num < next_num:
+        count += 1
+        print(str(index) + ' ' + str(current_num) + ' ' + str(next_num))
 
-for index, elem in enumerate(lst):
-    print(' ')
-    print('the index value is ' + str(index))
-    # checking to make sure we don't go out of bounds
-    if (index - 1 >= 0):
-        # defining the positional elements
-        prev_el = lst[index-1]
-        curr_el = elem
-
-        # performing the check to see if the next element is larger than the current element
-        if prev_el < curr_el:
-            print ('the previous value ' + prev_el + ' is smaller than the next value ' + curr_el + ' yay!!')
-            count += 1
-            print('count UPDATE: ' + str(count))
-
-        else:
-            print ('the previous value ' + prev_el + ' is NOT smaller than the next value ' + curr_el + ' BOO!!')
-            print('the count is STILL ' + str(count))
-            continue
-
-
-
-
-
-'''
-print the output
---------------------------------------------------------------
-'''
-print('-------------------------------------------------------')
-print('there are ' + str(len(lst)) + ' lines in the input file')
-print("the count of integers larger than the previous integers: " + str(count))
+print(count)
