@@ -18,16 +18,17 @@ def extract_to_list(file, lst):
 extract_to_list(file,lst)
 
 
+
 '''
-for each value in the list(index), compare it to the next value (index + 1)
+for each value in the list(index), compare it to the previous value (index + 1)
 --------------------------------------------------------------
 '''
 for index, elem in enumerate(lst):
     # checking to make sure we don't go out of bounds
     if (index - 1 >= 0):
         # defining the positional elements
-        prev_el = str(lst[index-1])
-        curr_el = str(elem)
+        prev_el = lst[index-1]
+        curr_el = elem
 
         # performing the check to see if the next element is larger than the current element
         if prev_el < curr_el:
@@ -45,4 +46,6 @@ for index, elem in enumerate(lst):
 print the output
 --------------------------------------------------------------
 '''
-print("count of integers larger than the previous integers: " + str(count))
+print('-------------------------------------------------------')
+print('there are ' + str(len(lst)) + ' lines in the input file')
+print("the count of integers larger than the previous integers: " + str(count))
