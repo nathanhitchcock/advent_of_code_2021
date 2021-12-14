@@ -1,5 +1,3 @@
-
-# Online Python - IDE, Editor, Compiler, Interpreter
 # puzzle from https://adventofcode.com/2021/day/1
 
 count = 0
@@ -40,16 +38,11 @@ for index, elem in enumerate(lst):
 
         # performing the check to see if the next element is larger than the current element
         if prev_el > curr_el:
-            print ('the previous value ' + prev_el + ' is larger than the next value ' + curr_el + ' yay!!')
             count += 1
-            print('count changed: ' + str(count))
+            print ('the previous value ' + prev_el + ' is larger than the current value ' + curr_el + ' count changed: ' + str(count))
 
         else:
-            print ('the previous value ' + prev_el + ' is NOT larger than the next value ' + curr_el + ' BOO!!')
-            print('the count is STILL ' + str(count))
-            continue
-
-            #curr_el == next_el
+            print ('the previous value ' + prev_el + ' is NOT larger than the current value ' + curr_el + ' the count is STILL ' + str(count))
 
 
 '''
