@@ -17,32 +17,28 @@ def extract_to_list(file, lst):
 
 extract_to_list(file,lst)
 
-#print(lst)
-
-previous = lst[0]
-
 
 '''
 for each value in the list(index), compare it to the next value (index + 1)
 --------------------------------------------------------------
 '''
-
-
 for index, elem in enumerate(lst):
     # checking to make sure we don't go out of bounds
-    if (index+1 < len(lst) and index - 1 >= 0):
+    if (index - 1 >= 0):
         # defining the positional elements
         prev_el = str(lst[index-1])
         curr_el = str(elem)
-        next_el = str(lst[index+1])
 
         # performing the check to see if the next element is larger than the current element
-        if prev_el > curr_el:
+        if prev_el < curr_el:
+            print ('the previous value ' + prev_el + ' is smaller than the next value ' + curr_el + ' yay!!')
             count += 1
-            print ('the previous value ' + prev_el + ' is larger than the current value ' + curr_el + ' count changed: ' + str(count))
+            print('count UPDATE: ' + str(count))
 
         else:
-            print ('the previous value ' + prev_el + ' is NOT larger than the current value ' + curr_el + ' the count is STILL ' + str(count))
+            print ('the previous value ' + prev_el + ' is NOT smaller than the next value ' + curr_el + ' BOO!!')
+            print('the count is STILL ' + str(count))
+            continue
 
 
 '''
