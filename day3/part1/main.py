@@ -27,10 +27,17 @@ for x in arr:
         count_bit0 += 1
     else:
         count_bit1 += 1
-
 if count_bit0 > count_bit1:
     print("the first bit is 0")
 else:
     print("the first bit is 1")
 
-print (count_bit0, count_bit1)
+for x in arr:
+    if x[1] == "0":
+        count_bit0 += 1
+    else:
+        count_bit1 += 1
+if count_bit0 > count_bit1:
+    print("the second bit is 0")
+else:
+    print("the second bit is 1")
