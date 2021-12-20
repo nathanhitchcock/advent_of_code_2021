@@ -15,7 +15,7 @@ epsilon_rate = []
 
 #input the numbers from the dataset
 #--------------------------------------------------------------
-lst = open("input2.dat").readlines()
+lst = open("input.dat").readlines()
 
 arr = np.array(lst)
 
