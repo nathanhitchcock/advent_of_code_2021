@@ -35,3 +35,17 @@ Use the binary numbers in your diagnostic report to calculate the gamma rate and
 
 '''
 references used:
+numpy -
+https://www.kite.com/python/answers/how-to-count-the-occurrences-of-a-value-in-a-numpy-array-in-python
+
+how to iterate over a 2d array (by columns)-
+https://stackoverflow.com/questions/10148818/numpy-how-to-iterate-over-columns-of-array
+
+great simple zip explanation -
+https://www.youtube.com/watch?v=7zx603xCri4
+
+converting a list into a string -
+https://www.simplilearn.com/tutorials/python-tutorial/list-to-string-in-python
+
+converting a list to a binary number -
+https://stackoverflow.com/questions/38935169/convert-elements-of-a-list-into-binary
